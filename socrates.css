@@ -1,0 +1,38 @@
+#top{
+    border: solid black;
+    padding: 1px;
+    margin: 1px;
+    text-align: center;
+}
+#header{
+    border: solid black;
+    padding: 1px;
+    margin: 1px;
+    font-size: 24px;
+    text-align: center;
+}
+
+#board{
+    border: solid black;
+    padding: 1px;
+    margin: 1px;
+    font-size: 48px;
+    text-align: center;
+}
+
+#guess{
+    border: solid black;
+    padding: 1px;
+    margin: 1px;
+    font-size: 24px;
+}
+#specials{
+    border: solid black;
+    padding: 1px;
+    margin: 1px;
+    font-size: 24px;
+}
+.button{
+    background-color: darkkhaki;
+    font-size: 18px;
+}

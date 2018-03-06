@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Socrates Library</title>
+
+
+    <link rel="stylesheet" href="socrates.css">
+
+</head>
+<body>
+    <!-- This Div is the title of the game -->
+    <div id="top">
+        <h1>The Lost Library of Socrates</h1>
+    </div>
+    <!-- This Div holds player information such as name, level and score the content is filled in by
+    the JS code in the socrates.js file-->
+    <div id="header">
+
+    </div>
+    <!-- This Div holds the blank spaces and the main puzzle the content is filled in by
+    the JS code in the socrates.js file-->
+    <div id="board">
+
+    </div>
+    <!-- This Div holds the two input fields for guessing a letter and guessing a word the values in the
+     fields are reset to blanks by JS code in the socrates.js file after every guess-->
+    <div id="guess">
+        <label for="letterGuess">Guess a letter</label>
+        <input id="letterGuess" name="letterGuess" onkeyup="letterGuess(event)" placeHolder="type a letter & press enter" ><br>
+        <label for="wordGuess">Guess the word</label>
+        <input id="wordGuess" name="wordGuess" onkeyup="wordGuess(event)" placeHolder="type a word & press enter" ><br>
+    </div>
+    <!-- This Div holds the quantity, explanation and buttons for using special abilities and is updated by
+    the JS code in the socrates.js file the updates are actually accomplished at the individual text id levels
+    as to only affect as much of the dom as needed to provide functionality-->
+    <div id="specials">
+        <p>
+            <text id="streln"></text>
+            <button class="button" type="button" onclick="Specials('Streln')">Streln</button>
+            The Streln special reveals the common letters S T R E L and N.
+
+        </p>
+        <p>
+            <text id="vowels"></text>
+            <button class="button" type="button" onclick="Specials('Vowels')">Vowels</button>
+            Vowels reveals all vowels in the puzzle.
+
+        </p>
+        <p>
+            <text id="pickALetter"></text>
+            <button class="button" type="button" onclick="Specials('PickALetter')">Pick A Letter</button>
+            The Pick A Letter special lets you reveal a letter in the position of your choosing.
+        </p>
+        <p>
+            <text id="freeLetter"></text>
+            <button class="button" type="button" onclick="Specials('FreeLetter')">Free Letter</button>
+            The Free Letter special reveals a random letter.
+        </p>
+    </div>
+
+    <!--The JS files are loaded last as I was having issues with DOM errors when I loaded them first.
+    Also a lot of the HTML is built by the JS so it doesn't hurt having them down here-->
+    <script src="keeper.js"></script>
+    <script src="socrates.js"></script>
+</body>
+</html>
